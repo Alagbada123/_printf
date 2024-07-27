@@ -7,7 +7,6 @@
  *
  */
 
-
 int _printf(const char *format, ...)
 {
 	match m[] = {
@@ -15,7 +14,7 @@ int _printf(const char *format, ...)
 		{"%d", print_dec}, {"%i", print_int}, {"%r", print_Reverse},
 		{"%R", print_Rot13}, {"%b", print_bin}, {"%u", print_unsigned},
 		{"%o", print_octal}, {"%x", print_hexa}, {"%X", print_HEXA},
-		{"%S", print_Sstring}, {"%p", print_pointer}
+		{"%S", print_Sstring}, {"%p", print_points}
 	};
 
 	va_list args;
@@ -24,21 +23,20 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-		return (err);
+		return (-1);
 Step1:
-	while (format[a] = '\0')
+	while (format[a] != '\0')
 	{
 		b = 13;
 		while (b >= 0)
 		{
-			if (m[b].id[0] == format[a] && m[j].id[1] == format[a + 1])
-				;
+			if (m[b].id[0] == format[a] && m[b].id[1] == format[a + 1])
 			{
 				len = len + m[b].f(args);
 				a = a + 2;
 				goto Step1;
 			}
-			j--;
+			b--;
 		}
 		_putchar(format[a]);
 		a++;

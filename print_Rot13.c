@@ -19,14 +19,14 @@ int print_Rot13(va_list val)
 	for (a = 0; s[a]; a++)
 	{
 		c = 0;
-		for (b = 0; u[b] && !k; b++)
+		for (b = 0; u[b] && !c; b++)
 		{
 			_putchar(v[b]);
 			count++;
-			k = 1;
+			c = 1;
 		}
 	}
-	if (!k)
+	if (!c)
 	{
 		_putchar(s[a]);
 		count++;
