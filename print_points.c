@@ -14,7 +14,7 @@ int print_points(va_list val)
 	long int b;
 	int a, c;
 
-	p = va_arg(val, void *);
+	p = va_arg(val, void*);
 	if (p == NULL)
 	{
 		for (a = 0; s[a] != '\0'; a++)
