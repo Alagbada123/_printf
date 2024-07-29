@@ -25,14 +25,14 @@ int print_Rot13(va_list args)
 			{
 				_putchar(v[b]);
 				count++;
-				c = 1;
+				break;
 			}
 		}
-	}
-	if (!c)
-	{
-		_putchar(s[a]);
-		count++;
+		if (!u[b])
+		{
+			_putchar(s[a]);
+			count++;
+		}
 	}
 	return (count);
 }
