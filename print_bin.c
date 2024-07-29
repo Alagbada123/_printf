@@ -16,7 +16,7 @@ int print_bin(va_list val)
 
 	for (a = 0; a < 32; a++)
 	{
-		d = ((b << (32 - a)) & num);
+		d = ((b << (31 - a)) & num);
 		if (d >> (31 - a))
 			flag = 1;
 		if (flag)
