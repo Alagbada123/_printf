@@ -37,8 +37,8 @@ int print_HEXA_PLUS(unsigned int num);
 int print_Sstring(va_list val);
 int print_points(va_list val);
 int print_hexa_plus(unsigned long int num);
-int print_Reverse(va_list val);
-int print_Rot13(va_list val);
+int print_Reverse(va_list args);
+int print_Rot13(va_list args);
 
 
 #endif
