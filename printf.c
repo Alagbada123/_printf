@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 		{"%d", print_dec}, {"%i", print_int}, {"%r", print_Reverse},
 		{"%R", print_Rot13}, {"%b", print_bin}, {"%u", print_unsigned},
 		{"%o", print_octal}, {"%x", print_hexa}, {"%X", print_HEXA},
-		{"%S", print_Sstring}, {"%p", print_points}
+		{"%S", print_Sstring}, {"%p", print_points:
 	};
 
 	va_list args;
