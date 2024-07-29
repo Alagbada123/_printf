@@ -2,7 +2,7 @@
 /**
  * print_hexa - prints the integer in octal form
  * @val: argument
- * Return: number of character printed
+ * Return: count
  */
 
 int print_hexa(va_list val)
@@ -14,7 +14,7 @@ int print_hexa(va_list val)
 
 	while (num / 16 != 0)
 	{
-		num = num / 16;
+		num /= 16;
 		count++;
 	}
 	count++;
@@ -23,7 +23,7 @@ int print_hexa(va_list val)
 	for (a = 0; a < count; a++)
 	{
 		array[a] = tempo % 16;
-		tempo = tempo / 16;
+		tempo /= 16;
 	}
 	for (a = count - 1; a >= 0; a--)
 	{

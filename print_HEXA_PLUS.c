@@ -2,7 +2,7 @@
 /**
  * print_HEXA_PLUS - prints the integer in octal form
  * @num: numbers
- * Return: number of character printed
+ * Return: count
  */
 
 int print_HEXA_PLUS(unsigned int num)
@@ -13,7 +13,7 @@ int print_HEXA_PLUS(unsigned int num)
 
 	while (num / 16 != 0)
 	{
-		num = num / 16;
+		num /= 16;
 		count++;
 	}
 	count++;
@@ -22,7 +22,7 @@ int print_HEXA_PLUS(unsigned int num)
 	for (a = 0; a < count; a++)
 	{
 		array[a] = tempo % 16;
-		tempo = tempo / 16;
+		tempo /= 16;
 	}
 	for (a = count - 1; a >= 0; a--)
 	{

@@ -1,19 +1,20 @@
 #include "main.h"
 /**
  * print_hexa_plus - prints the integer in octal form
- * @num: numbers
- * Return: number of character printed
+ * @num: argument
+ * Return: count
  */
 
 int print_hexa_plus(unsigned long int num)
 {
-	long int a, count = 0;
+	long int a;
+	long int count = 0;
 	long int *array;
 	unsigned long int tempo = num;
 
 	while (num / 16 != 0)
 	{
-		num = num / 16;
+		num /= 16;
 		count++;
 	}
 	count++;
@@ -22,7 +23,7 @@ int print_hexa_plus(unsigned long int num)
 	for (a = 0; a < count; a++)
 	{
 		array[a] = tempo % 16;
-		tempo = tempo / 16;
+		tempo /= 16;
 	}
 	for (a = count - 1; a >= 0; a--)
 	{

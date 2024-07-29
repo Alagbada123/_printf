@@ -2,6 +2,7 @@
 /**
  * print_bin - conversion to binary
  * @val: argument
+ *
  * Return: integer
  *
  */

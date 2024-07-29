@@ -3,7 +3,7 @@
 /**
  * print_points - prints pointer
  * @val: value
- * Return: integer
+ * Return: count
  *
  */
 
@@ -18,7 +18,9 @@ int print_points(va_list val)
 	if (p == NULL)
 	{
 		for (a = 0; s[a] != '\0'; a++)
+		{
 			_putchar(s[a]);
+		}
 		return (a);
 	}
 	b = (unsigned long int)p;

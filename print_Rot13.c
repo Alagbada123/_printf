@@ -21,9 +21,12 @@ int print_Rot13(va_list val)
 		c = 0;
 		for (b = 0; u[b] && !c; b++)
 		{
-			_putchar(v[b]);
-			count++;
-			c = 1;
+			if (s[a] == u[b])
+			{
+				_putchar(v[b]);
+				count++;
+				c = 1;
+			}
 		}
 	}
 	if (!c)

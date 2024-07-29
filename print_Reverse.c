@@ -2,15 +2,15 @@
 
 /**
  * print_Reverse - prints a string in reverse form
- * @val: argument
+ * @args: print argument
  *
  * Return: The string
  *
  */
 
-int print_Reverse(va_list val)
+int print_Reverse(va_list args)
 {
-	char *s = va_arg(val, char*);
+	char *s = va_arg(args, char*);
 	int a;
 	int b = 0;
 

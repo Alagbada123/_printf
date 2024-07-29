@@ -2,7 +2,7 @@
 /**
  * print_int - prints the integer
  * @args: print argument
- * Return: number of character printed
+ * Return: integer
  */
 int print_int(va_list args)
 {
@@ -39,6 +39,5 @@ int print_int(va_list args)
 		}
 	}
 	_putchar(last + '0');
-
 	return (i);
 }
