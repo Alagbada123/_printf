@@ -3,7 +3,7 @@
 /**
  * printf_char - prints a char.
  * @val: argument.
- * Return: 0
+ * Return: 1
  */
 int printf_char(va_list val)
 {
@@ -11,5 +11,5 @@ int printf_char(va_list val)
 
 	str = va_arg(val, int);
 	_putchar(str);
-	return (0);
+	return (1);
 }
