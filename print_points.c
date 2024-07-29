@@ -11,8 +11,8 @@ int print_points(va_list val)
 {
 	void *p;
 	char *s = "(nil)";
-	long int b;
-	int a, c;
+	unsigned long int b;
+	int a, c = 0;
 
 	p = va_arg(val, void*);
 	if (p == NULL)
