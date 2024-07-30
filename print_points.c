@@ -10,7 +10,7 @@
 int print_points(va_list val)
 {
 	void *p;
-	char *s = "(nil)";
+	char *s = "(null)";
 	unsigned long int b;
 	int a, c = 0;
 
