@@ -4,6 +4,12 @@
  * handle_flags - Parses and sets flags for _printf
  * @flag: pointer to a potential string of flags
  * @index: index counter for the original format string
+ *
+ * Description: This function iterates over a string of potential flags,
+ * checks each character against known flag characters, and sets the
+ * appropriate flags for the _printf function. The index counter is
+ * incremented for each matched flag.
+ *
  * Return: if flag characters are matched - a corresponding value
  *		Otherwise - 0
  */
