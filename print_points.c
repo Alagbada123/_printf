@@ -10,22 +10,22 @@
 int print_points(va_list val)
 {
 	void *p;
-	char *s = "(null)";
-	unsigned long int b;
-	int a, c = 0;
+	char *s = "(nil)";
+	unsigned long int a;
+	int b, c = 0;
 
 	p = va_arg(val, void*);
 	if (p == NULL)
 	{
-		for (a = 0; s[a] != '\0'; a++)
+		for (b = 0; s[b] != '\0'; b++)
 		{
-			_putchar(s[a]);
+			_putchar(s[b]);
 		}
-		return (a);
+		return (b);
 	}
-	b = (unsigned long int)p;
+	a = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
-	c = print_hexa_plus(b);
+	c = print_hexa_plus(a);
 	return (c + 2);
 }
