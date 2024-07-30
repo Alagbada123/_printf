@@ -17,12 +17,14 @@ int print_points(va_list val)
 	p = va_arg(val, void*);
 	if (p == NULL)
 	{
-		for (b = 0; s[b] != '\0'; b++)
+		while (s[b] != '\0')
 		{
 			_putchar(s[b]);
+			b++;
 		}
 		return (b);
 	}
+
 	a = (unsigned long int)p;
 	_putchar('0');
 	_putchar('x');
