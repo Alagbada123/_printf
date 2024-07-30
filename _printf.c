@@ -1,29 +1,28 @@
 #include "main.h"
 
 /**
- * _printf - does what printf would do
- * @format: this is an identifier to look for a something
- * Return: integer
- *
+ * _printf - a custom made printf function
+ * @format: format string containing the characters and the specifiers
+ * Return: the length of the formatted output string
  */
 
-int _printf(const char *format, ...)
+int _printf(const char * const format, ...)
 {
 	match m[] = {
-		{"%c", printf_char}, {"%s", printf_string}, {"%%", print_37},
+		{"%c", printf_char}, {"%str", print_string}, {"%%", print_37},
 		{"%d", print_dec}, {"%i", print_int}, {"%r", print_Reverse},
 		{"%R", print_Rot13}, {"%b", print_bin}, {"%u", print_unsigned},
 		{"%o", print_octal}, {"%x", print_hexa}, {"%X", print_HEXA},
-		{"%S", print_Sstring}, {"%p", print_points:
+		{"%S", print_Sstring}, {"%p", print_points}
 	};
 
 	va_list args;
-	int a = 0, len = 0;
-	int b;
+		int a = 0, b, len = 0;
 
 	va_start(args, format);
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
+
 Step1:
 	while (format[a] != '\0')
 	{
@@ -32,15 +31,16 @@ Step1:
 		{
 			if (m[b].id[0] == format[a] && m[b].id[1] == format[a + 1])
 			{
-				len = len + m[b].f(args);
+				len += m[b].f(args);
+
 				a = a + 2;
 				goto Step1;
 			}
 			b--;
 		}
 		_putchar(format[a]);
-		a++;
 		len++;
+		a++;
 	}
 	va_end(args);
 	return (len);
