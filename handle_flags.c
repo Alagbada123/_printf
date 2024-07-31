@@ -2,44 +2,46 @@
 
 /*
  * handle_flags - Parses and sets flags for _printf
- * @flag: pointer to a potential string of flags
- * @index: index counter for the original format string
- * Return: if flag characters are matched - a corresponding value
- *		Otherwise - 0
+ * @format: The format string
+ * @i: Pointer to the current position in the format string
+ * @plus: Pointer to the plus flag variable
+ * @space: Pointer to the space flag variable
+ * @hash: Pointer to the space flag variable
+ *
+ * Description: This function parses the format string starting at the
+ * current position (pointed to by i) to identify any flags (+, space, #).
+ * It sets the corresponding flag variables to 1 if the flag is present
+ * and advances the current position in the format string.
  */
 
-unsigned char handle_flags(const char *flag, char *index)
+void handle_flags(const char *format, int *i, int *plus,
+		int *space, int *hash)
+
 {
-	int m, n;
-	unsigned char ret = 0;
 	flag_f flags[] = {
 		{'+', plus},
 		{' ', space},
 		{'#', hash},
-		{'0', zero},
-		{'-', negative},
-		{0, 0}
+		{0, NULL}
 	};
 
-	for (m = 0; flag[m]; m++)
+	int n;
+
+	while (format[*i])
 	{
+		int found_flag = 0;
+
 		for (n = 0; flags[n].flag != 0; n++)
 		{
-			if (flag[m] == flags[n].flag)
+			if (format[*i] == flags[n].flag)
 			{
-				(*index)++;
-				if (ret == 0)
-					ret = flags[n].value;
-
-				else
-					ret |= flags[n].value;
-				break;
+				*(flags[n].value) = 1;
+				found_flag = 1
+					break;
 			}
 		}
-
-		if (flags[n].value == 0)
+		if (!found_flag)
 			break;
+		(*i)++;
 	}
-
-	return (ret);
 }
