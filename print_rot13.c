@@ -2,11 +2,14 @@
 /**
  * print_rot13 - converts to Rot13
  * @args: printf arguments
+ * @plus: flag to indicate if the plus flag is set
+ * @space: flag to indicate if the space flag is set
+ * @hash: flag to indicate if the hash flag is set
  * Return: count
  *
  */
 
-int print_rot13(va_list args)
+int print_rot13(va_list args, int plus, int space, int hash)
 {
 	int a, b, count = 0;
 	int c = 0;

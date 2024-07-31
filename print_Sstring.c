@@ -2,12 +2,15 @@
 /**
  * print_Sstring - prints strings exclusively
  * @val: value
+ * @plus: flag to indicate if the plus flag is set
+ * @space:flag to indicate if the space flag is set
+ * @hash: flag to indicate if the hash flag is set
  * Return: the number of characters that was printed
  *
  */
 
 
-int print_Sstring(va_list val)
+int print_Sstring(va_list val, int plus, int space, int hash)
 {
 	char *s;
 	int a, len = 0;

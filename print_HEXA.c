@@ -2,10 +2,13 @@
 /**
  * print_HEXA - prints the integer in octal form
  * @val: argument
+ * @plus: flag to indicate if the plus flag is set
+ * @space: flag to indicate if the space flag is set
+ * @hash: flag to indicate if the hash flag is set
  * Return: number of character printed
  */
 
-int print_HEXA(va_list val)
+int print_HEXA(va_list val, int plus, int space, int hash)
 {
 	int a, count = 0;
 	int *array;

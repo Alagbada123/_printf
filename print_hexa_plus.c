@@ -2,10 +2,13 @@
 /**
  * print_hexa_plus - prints the integer in octal form
  * @num: argument
+ * @plus: flag to indicate if the plus flag is set
+ * @space: flag to indicate if the space flag is set
+ * @hash: flag to indicate if the hash flag is set
  * Return: count
  */
 
-int print_hexa_plus(unsigned long int num)
+int print_hexa_plus(unsigned long int num, int plus, int space, int hash)
 {
 	long int a;
 	long int count = 0;

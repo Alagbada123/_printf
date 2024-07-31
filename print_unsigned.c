@@ -2,12 +2,12 @@
 /**
  * print_unsigned - prints the integer
  * @args: print argument
- * @plus_flag: flag to indicate if the plus flag is set
- * @space_flag: flag to indicate if the space flag is set
- * @hash_flag: flag to indicate if the hash flag is set
+ * @plus: flag to indicate if the plus flag is set
+ * @space: flag to indicate if the space flag is set
+ * @hash: flag to indicate if the hash flag is set
  * Return: number of character printed
  */
-int print_unsigned(va_list args, int plus_flag, int space_flag, int hash_flag)
+int print_unsigned(va_list args, int plus, int space, int hash)
 {
 	unsigned int n = va_arg(args, unsigned int);
 	int num, last = n % 10, digit, exp = 1;

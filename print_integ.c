@@ -1,13 +1,13 @@
 #include "main.h"
 /**
  * print_int - prints the integer
- * @plus_flag: flag to indicate if the plus flag is set
- * @space_flag: flag to indicate if the space flag is set
- * @hash_flag: flag to indicate if the hash flag is set
+ * @plus: flag to indicate if the plus flag is set
+ * @space: flag to indicate if the space flag is set
+ * @hash: flag to indicate if the hash flag is set
  * @args: print argument
  * Return: integer
  */
-int print_int(va_list args, int plus_flag, int space_flag, int hash_flag)
+int print_int(va_list args, int plus, int space, int hash)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;

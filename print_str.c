@@ -3,9 +3,9 @@
 /**
  * print_string - print a string.
  * @val: argument.
- * @plus_flag: flag to indicate if the plus flag is set
- * @space_flag: flag to indicate if the space flag is set
- * @hash_flag: flag to indicate if the hash flag is set
+ * @plus: flag to indicate if the plus flag is set
+ * @space: flag to indicate if the space flag is set
+ * @hash: flag to indicate if the hash flag is set
  *
  * Description: This function parses the format string starting at the
  * current position (pointed to by i) to identify any flags (+, space, #).
@@ -14,7 +14,7 @@
  * Return: the length of the string
  */
 
-int print_string(va_list val, int plus_flag, int space_flag, int hash_flag)
+int print_string(va_list val, int plus, int space, int hash)
 {
 	char *str;
 	int i, len;
