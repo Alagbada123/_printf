@@ -47,7 +47,6 @@ typedef struct flag
 	int *value;
 } flag_f;
 
-
 int _putchar(char c);
 
 /* Function prototypes */
