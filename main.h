@@ -41,25 +41,25 @@ typedef struct flag_f
 
 int _putchar(char c);
 int _printf(const char *format, ...);
-int printf_char(va_list val);
-int print_string(va_list val);
-int _strlenc(const char *str);
-int _strlen(char *str);
-int print_37(void);
-int print_dec(va_list args);
-int print_int(va_list args);
-int print_bin(va_list val);
-int print_unsigned(va_list args);
-int print_octal(va_list val);
-int print_hexa(va_list val);
-int print_HEXA(va_list val);
-int print_HEXA_PLUS(unsigned int num);
-int print_Sstring(va_list val);
-int print_points(va_list val);
-int print_hexa_plus(unsigned long int num);
-int print_Reverse(va_list args);
-int print_Rot13(va_list args);
-
+int printf_char(va_list val, int plus_flag, int space_flag, int hash_flag);
+int print_string(va_list val, int plus_flag, int space_flag, int hash_flag);
+int _strlenc(const char *str, int plus_flag, int space_flag, int hash_flag);
+int _strlen(char *str, int plus_flag, int space_flag, int hash_flag);
+int print_37(void, int plus_flag, int space_flag, int hash_flag);
+int print_dec(va_list args, int plus_flag, int space_flag, int hash_flag);
+int print_int(va_list args, int plus_flag, int space_flag, int hash_flag);
+int print_bin(va_list val, int plus_flag, int space_flag, int hash_flag);
+int print_unsigned(va_list args, int plus_flag, int space_flag, int hash_flag);
+int print_octal(va_list val, int plus_flag, int space_flag, int hash_flag);
+int print_hexa(va_list val, int plus_flag, int space_flag, int hash_flag);
+int print_HEXA(va_list val, int plus_flag, int space_flag, int hash_flag);
+int print_HEXA_PLUS(unsigned int num, int plus_flag, int space_flag, int hash_flag);
+int print_Sstring(va_list val, int plus_flag, int space_flag, int hash_flag);
+int print_points(va_list val, int plus_flag, int space_flag, int hash_flag);
+int print_hexa_plus(unsigned long int num, int plus_flag, int space_flag, int hash_flag);
+int print_reverse(va_list args, int plus_flag, int space_flag, int hash_flag);
+int print_rot13(va_list args, int plus_flag, int space_flag, int hash_flag);
+void handle_flags(const char*format, int *i, int *plus_flag, int *space_flag, int *hash_flag);
 /* to handle others */
 
 unsigned char handle_flags(const char *flags, char *index);

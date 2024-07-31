@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_Reverse - prints a string in reverse form
+ * print_reverse - prints a string in reverse form
  * @args: print argument
  *
  * Return: The number of characters printed
  *
  */
 
-int print_Reverse(va_list args)
+int print_reverse(va_list args)
 
 {
 	char *s = va_arg(args, char*);
