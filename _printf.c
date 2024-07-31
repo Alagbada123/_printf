@@ -10,8 +10,8 @@ int _printf(const char * const format, ...)
 {
 	match m[] = {
 		{"%c", printf_char}, {"%str", print_string}, {"%%", print_37},
-		{"%d", print_dec}, {"%i", print_int}, {"%r", print_Reverse},
-		{"%R", print_Rot13}, {"%b", print_bin}, {"%u", print_unsigned},
+		{"%d", print_dec}, {"%i", print_int}, {"%r", print_reverse},
+		{"%R", print_rot13}, {"%b", print_bin}, {"%u", print_unsigned},
 		{"%o", print_octal}, {"%x", print_hexa}, {"%X", print_HEXA},
 		{"%S", print_Sstring}, {"%p", print_points}
 	};

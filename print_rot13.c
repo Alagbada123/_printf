@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * print_Rot13 - converts to Rot13
+ * print_rot13 - converts to Rot13
  * @args: printf arguments
  * Return: count
  *
  */
 
-int print_Rot13(va_list args)
+int print_rot13(va_list args)
 {
 	int a, b, count = 0;
 	int c = 0;

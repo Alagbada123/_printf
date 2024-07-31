@@ -1,7 +1,7 @@
 #include "main.h"
-
-/*
+/**
  * handle_flags - Parses and sets flags for _printf
+<<<<<<< HEAD
  * @format: The format string
  * @i: Pointer to the current position in the format string
  * @plus: Pointer to the plus flag variable
@@ -17,6 +17,20 @@
 void handle_flags(const char *format, int *i, int *plus,
 		int *space, int *hash)
 
+=======
+ * @flag: Pointer to a string of potential flags
+ * @index: Index counter for the original format string
+ *
+ * Description: This function iterates over a string of potential flags,
+ *              checks each character against known flag characters, and
+ *              sets the appropriate flags for the _printf function. The
+ *              index counter is incremented for each matched flag.
+ *
+ * Return: The combined value of matched flags. If no flags are matched,
+ *         the function returns 0.
+ */
+unsigned char handle_flags(const char *flag, char *index)
+>>>>>>> 7c3f7c300251b5d7d078db8b5072f77d4ebfb802
 {
 	flag_f flags[] = {
 		{'+', plus},
