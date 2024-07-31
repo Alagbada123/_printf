@@ -1,19 +1,17 @@
 #include "main.h"
-
-/*
+/**
  * handle_flags - Parses and sets flags for _printf
- * @flag: pointer to a potential string of flags
- * @index: index counter for the original format string
+ * @flag: Pointer to a string of potential flags
+ * @index: Index counter for the original format string
  *
  * Description: This function iterates over a string of potential flags,
- * checks each character against known flag characters, and sets the
- * appropriate flags for the _printf function. The index counter is
- * incremented for each matched flag.
+ *              checks each character against known flag characters, and
+ *              sets the appropriate flags for the _printf function. The
+ *              index counter is incremented for each matched flag.
  *
- * Return: if flag characters are matched - a corresponding value
- *		Otherwise - 0
+ * Return: The combined value of matched flags. If no flags are matched,
+ *         the function returns 0.
  */
-
 unsigned char handle_flags(const char *flag, char *index)
 {
 	int m, n;
